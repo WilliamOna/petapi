@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "petapp0709eeca_identitypool_0709eeca",
+    "identityPoolName": "petappe46b0b2b_identitypool_e46b0b2b",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "petapp0709eeca",
-    "userPoolName": "petapp0709eeca_userpool_0709eeca",
+    "resourceNameTruncated": "petappe46b0b2b",
+    "userPoolName": "petappe46b0b2b_userpool_e46b0b2b",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "petapp0709eeca_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "petappe46b0b2b_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "0709eeca",
-    "resourceName": "petapp0709eeca",
+    "sharedId": "e46b0b2b",
+    "resourceName": "petappe46b0b2b",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [
@@ -46,11 +46,6 @@
         ]
     },
     "useDefault": "default",
-    "triggers": "{}",
     "userPoolGroupList": [],
-    "parentStack": {
-        "Ref": "AWS::StackId"
-    },
-    "permissions": [],
     "dependsOn": []
 }

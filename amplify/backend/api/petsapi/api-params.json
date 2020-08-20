@@ -1,0 +1,41 @@
+{
+    "paths": [
+        {
+            "name": "/pet",
+            "lambdaFunction": "petfunc",
+            "privacy": {
+                "private": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "petsapi",
+    "apiName": "petsapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "petfunc"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 0,
+        "authRoleName": "amplify-petapp-dev-03323-authRole",
+        "unAuthRoleName": "amplify-petapp-dev-03323-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "petfunc",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

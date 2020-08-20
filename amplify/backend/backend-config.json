@@ -1,9 +1,53 @@
 {
 	"auth": {
-		"petapp0709eeca": {
+		"petappe46b0b2b": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
-			"dependsOn": []
+			"dependsOn": [],
+			"customAuth": false
+		}
+	},
+	"storage": {
+		"petdb": {
+			"service": "DynamoDB",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"function": {
+		"petfunc": {
+			"build": true,
+			"providerPlugin": "awscloudformation",
+			"service": "Lambda",
+			"dependsOn": [
+				{
+					"category": "storage",
+					"resourceName": "petdb",
+					"attributes": [
+						"Name",
+						"Arn"
+					],
+					"attributeEnvMap": {
+						"Name": "TABLE_NAME",
+						"Arn": "TABLE_ARN"
+					}
+				}
+			]
+		}
+	},
+	"api": {
+		"petsapi": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "petfunc",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
 		}
 	}
 }
