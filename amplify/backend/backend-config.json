@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"petapp0709eeca": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
