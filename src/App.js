@@ -23,7 +23,7 @@ function App() {
 				name: petName,
 				type: petType,
 			},
-		}).then((fetchedPets) => setPets([...pets, ...fetchedPets]));
+		}).then(() => setPets([...pets, { name: petName, type: petType }]));
 	};
 	return (
 		<div className='App'>
